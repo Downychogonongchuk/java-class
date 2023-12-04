@@ -46,17 +46,17 @@ public class s{
         System.out.println(answer);
 
 // # 3번 방법
-        Scanner sc = new Scanner(System.in);
+
         System.out.println("단어를 입력하세요");
-        String ans =sc.next();
-        ans = switch (ans) {
+        String an =sc.next();
+        an = switch (an) {
             case "desk" -> "책상";
             case "chair" -> "의자";
             case "monitor" -> "모니터";
             case "mouse" -> "마우스";
-            default -> ans;
+            default -> an;
         };
-        System.out.println(ans);
+        System.out.println(an);
 
 
 
