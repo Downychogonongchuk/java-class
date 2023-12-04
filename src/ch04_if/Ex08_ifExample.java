@@ -79,9 +79,11 @@ public class Ex08_ifExample {
 		}else {
 			if (num2 > num3){
 				max = num2;
+
 			}
+			System.out.println(max);
 		}
-		System.out.println(max);
+
 		
 		
 		
