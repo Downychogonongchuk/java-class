@@ -25,20 +25,25 @@ public class s{
         System.out.println(ans);
 
 // # 2번 방법
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
         System.out.println("단어를 입력하세요");
-        String ans =sc.next();
-        switch(ans) {
-            case "desk": ans ="책상";
+        String word =sc.next();
+        String answer = "";
+        switch(word) {
+            case "desk":
+                answer ="책상";
                 break;
-            case "chair": ans="의자";
+            case "chair":
+                answer="의자";
                 break;
-            case "monitor": ans="모니터";
+            case "monitor":
+                answer="모니터";
                 break;
-            case "mouse": ans="마우스";
+            case "mouse":
+                answer="마우스";
                 break;
         }
-        System.out.println(ans);
+        System.out.println(answer);
 
 // # 3번 방법
         Scanner sc = new Scanner(System.in);
