@@ -10,7 +10,7 @@ public class Ex08_ifExample {
 		// 입력 예 # 첫번째 숫자 : # 두번째 숫자: # 세번째 숫자:
 		
 		// 출력 예 # 가장 큰 숫자는 00 입니다.
-		// 1번 내가 푼 방법
+		// 1번 
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("첫번째 숫자를 입력하세요");
@@ -34,7 +34,7 @@ public class Ex08_ifExample {
 			}
 		}
 		
-		// 2번 재문 방법
+		// 2번
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("첫번째숫자: ");
 		int sum1 = scanner.nextInt();
@@ -59,7 +59,7 @@ public class Ex08_ifExample {
 		}
 		System.out.println("가장 큰 숫자는 "+ max +" 입니다.");
 		
-		// 3번 쌤 방법
+		// 3번 
 		if (num1 > num2 && num1 > num3) {
 			System.out.println("가장 큰 수는 " + num1);
 		}else if (num2 > num1 && num2 > num3) {
@@ -68,7 +68,7 @@ public class Ex08_ifExample {
 			System.out.println("가장 큰 수는 " + num3);
 		}
 		
-		// 4번 쌤 2번 방법
+		// 4번 
 		int a = 0;
 		if (num1 > num2) {
 			if(num1 > num3) {
