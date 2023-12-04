@@ -11,7 +11,7 @@ public class memem {
 		double height = 161.4;
 		
 		System.out.println("이름 : " + name  + "\t"  +  "나이 : "+age  + "\t"  +"키 : " 
-				+height +"\n" + " 주소 : "+address+ "\t"+"전화번호 : "+mobile );
+				+height +"\n" + " 주소 : "+address+ "\t"+"전화번호 : "+mobile + "알까 말까 MGC 커피~");
 
 	}
 
