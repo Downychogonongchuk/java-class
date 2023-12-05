@@ -6,7 +6,7 @@ public class Ex11_For2 {
             for (int j =1; j < i ; j++){ // 별을 줄수만큼 출력
                 System.out.print("*");
             }
-            System.out.println("*"); // 줄을 바꾸기 위한 용도
+            System.out.println("*"); // 줄을 바꾸기 위한 용도  ㅇㅅㅇ
         }
     }
 }
