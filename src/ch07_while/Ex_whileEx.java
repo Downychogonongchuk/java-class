@@ -18,14 +18,14 @@ public class Ex_whileEx {
         }
 
         // 1~100 까지의 합 구하기
-        int sum=0; // 합계를 저장할 변수
-
-        int i = 1; // 루프 카운터 변수
-        while (i<=100){
-            sum+=i;
-            i++;
-        }
-        System.out.println("1~"+(i-1)+" 합:  "+sum);
+//        int sum=0; // 합계를 저장할 변수
+//
+//        int i = 1; // 루프 카운터 변수
+//        while (i<=100){
+//            sum+=i;
+//            i++;
+//        }
+//        System.out.println("1~"+(i-1)+" 합:  "+sum);
 
 
         /**
