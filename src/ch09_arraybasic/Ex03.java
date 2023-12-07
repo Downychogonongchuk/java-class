@@ -10,18 +10,21 @@ public class Ex03 {
          * 배열에 저장된 값의 총합. 평균 계산
          */
         Scanner sc = new Scanner(System.in);
-        int asb = 0;
-        int sum=0;
+        int asb = 0,   sum=0;
         int[] num = new int[3];
         int[] num2 = {1,2,3,4};
-
         for (int i = 0; i < num.length; i++){
-            asb = sc.nextInt();
+            asb = sc.nextInt();  // num[i] = sc.nextint();
              num[i] =asb;
             sum += num[i];
         }
         int avg = sum/ num.length;
         System.out.println(avg);
     }
+
+
+    }
+
+
 
 }
