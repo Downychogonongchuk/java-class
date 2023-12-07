@@ -13,12 +13,15 @@ public class Ex03 {
         int asb = 0;
         int sum=0;
         int[] num = new int[3];
+        int[] num2 = {1,2,3,4};
+
         for (int i = 0; i < num.length; i++){
             asb = sc.nextInt();
-            int[] num = {asb};
-
+             num[i] =asb;
+            sum += num[i];
         }
-
-
+        int avg = sum/ num.length;
+        System.out.println(avg);
     }
+
 }
