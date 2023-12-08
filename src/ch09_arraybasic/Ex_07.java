@@ -24,13 +24,15 @@ public class Ex_07 {
         int[] coin = {500,100,50,10};
 
         System.out.println("거스름돈을 입력해주세요");
-        int pay=sc.nextInt();
-        int sum = 0;
-        for (int i=0; i< coin.length;  i++){
+        int pay=sc.nextInt(); // 입력받은 거스름 돈
+//        int sum = 0;
+        for (int i=0; i< coin.length;  i++){ 
 //                sum = pay/coin[i];
 //            sum += pay%coin[i];
             System.out.println(pay/coin[i]);
+            // 입력받은 돈 나누기 배열의 [i]
                 pay= pay %coin[i];
+                // 나눈 수 / = 나누고 난 나머지
             }
         }
     }
