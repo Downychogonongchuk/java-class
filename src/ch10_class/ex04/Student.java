@@ -11,8 +11,11 @@ public class Student {
         System.out.println();
 
     }
-        public Student(String studentNameName, int studentNumber, String studentMajor){
+        public Student(String studentName, int studentNumber, String studentMajor){
                 this.studentName = studentName;
+                this.studentMajor =studentMajor;
+                this.studentNumber=studentNumber;
+                // this 필드 값 = 매개변수 값
             System.out.println("studentName = " + studentName + ", studentNumber = " + studentNumber + ", studentMajor = " + studentMajor);
 
 
