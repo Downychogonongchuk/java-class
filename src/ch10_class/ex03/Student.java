@@ -19,4 +19,8 @@ public class Student {
     public  Student(String studentName, String studentMajor){
         System.out.println("studentName = " + studentName + ", studentMajor = " + studentMajor);
     }
+    // 이름, 학과, 전화번호를 매개변수로 하는 생성자
+    public  Student(String studentName, String studentMajor, String studentMobile){
+        System.out.println("studentName = " + studentName + ", studentMajor = " + studentMajor + ", studentMobile = " + studentMobile);
+    }
     }
