@@ -1,6 +1,7 @@
 package ch10_class.ex09;
 /*
- 필드
+ 필드 , getter / setter , 기본 생성자 , 매개변수 생성자, toString
+ 5개 필수요소
  이름 (studentName)
  학번(studentNumber)
  학과(studentMajor)
@@ -53,5 +54,15 @@ public class Student {
         System.out.println(getStudentNumber());
         System.out.println(getStudentMajor());
         System.out.println(getStudentMobile());
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentName='" + studentName + '\'' +
+                ", studentNumber=" + studentNumber +
+                ", studentMajor='" + studentMajor + '\'' +
+                ", studentMobile='" + studentMobile + '\'' +
+                '}';
     }
 }
