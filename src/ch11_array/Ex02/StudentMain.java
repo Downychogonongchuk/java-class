@@ -9,6 +9,7 @@ public class StudentMain {
         // studentList
 
         List<Student> studentList= new ArrayList<>();
+
 //        studentList.add("Student 객체");
         // Student 객체
             Student stu = new Student(1L,"학생1","20231111","현대문학","01055554444");
@@ -27,8 +28,13 @@ public class StudentMain {
             System.out.println(studentList.get(i).getStudentName());
         }
     for (Student stuv: studentList){
+        // for (변수 : 컬렉션){   컬렉션 : List >>배열 >>Set , Map
+                // 실행문;
         System.out.println("stuv = " + stuv);
         System.out.println(stuv.getStudentName());
+    }
+    for (Student st: studentList){
+        System.out.println(st.getStudentNumber());
     }
 
 
