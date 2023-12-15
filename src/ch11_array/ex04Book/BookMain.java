@@ -25,9 +25,9 @@ public class BookMain {
             } else if (selectNo == 4) {
                 bookS.findByTitle();
             } else if (selectNo == 5) {
-                // 도서 수정
+                bookS.update();
             } else if (selectNo == 6) {
-                // 도서 삭제
+                bookS.delete();
             } else if (selectNo == 0) {
                 run = false;
             }
