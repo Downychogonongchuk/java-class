@@ -7,7 +7,7 @@ public class Ex01_ListBasic {
     public static void main(String[] args) {
         List<Integer> intList = new ArrayList<>();
 
-        List<String>strList2 = new ArrayList<>();
+//        List<String>strList2 = new ArrayList<>();
         // ArrayList<Integer>intList2 = new ArrayList<>();
 //        List<Integer> intList3 = new List<>();
 //         10 이라는 데이터를 추가하고
@@ -21,6 +21,8 @@ public class Ex01_ListBasic {
 //        //remove()
 //        intList.remove(1);
         List<String>strList = new ArrayList<>();
+        List<String>strList2 = new ArrayList<>(strList);
+
 
         strList.add("안녕");
         strList.add(1,"오랜만이야");

@@ -24,9 +24,13 @@ public class StudentMain {
             } else if (sel==3) {
                 studentService.method3();
             }else if (sel==4){
+                System.out.println("학생등록 성공");
+            } else  {
                 break;
             }
-
         }
+        // Repository로 부터 List를 리턴 받아 for 문으로 출력
+
+
     }
 }
