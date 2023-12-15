@@ -20,10 +20,10 @@ public class BookRepository {
     }
 
     public BookDTO findById(Long id) {
-        BookDTO BookD = null;
+        BookDTO BookD = null; //결과를 담을 dto 변수 선언
         for (int i = 0; i < dtoList.size(); i++) {
             if (id.equals(dtoList.get(i).getId())) {
-                BookD = dtoList.get(i);
+                BookD = dtoList.get(i);  //dto에 결과를 담아서 출력
             }
         }
         return BookD;

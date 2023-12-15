@@ -36,7 +36,7 @@ public class BookService {
     public void findAll(){
     List<BookDTO> bookDTOList = BookR.findAll();
     for (BookDTO bookDTO: bookDTOList){
-        System.out.println();
+        System.out.println(bookDTO);
     }
 //        BookR.findAll();
 //        System.out.println(BookR.findAll());
@@ -44,7 +44,9 @@ public class BookService {
     public void findById(){
         System.out.println("Id입력");
         Long id = sc.nextLong();
+        
         BookDTO BookD = BookR.findById(id);
+        // Repository의findById메서드에id를 담자/ BookDTO의 타입으로 BookD
         if (BookD!= null) {
             // 조회결과 있음
             System.out.println(BookD);
