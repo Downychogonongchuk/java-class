@@ -2,6 +2,7 @@ package ch11_array.ex04Book;
 
 import ch11_array.ex03.Book;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class BookService {
@@ -33,8 +34,12 @@ public class BookService {
 
     }
     public void findAll(){
-        BookR.findAll();
-        System.out.println(BookR.findAll());
+    List<BookDTO> bookDTOList = BookR.findAll();
+    for (BookDTO bookDTO: bookDTOList){
+        System.out.println();
+    }
+//        BookR.findAll();
+//        System.out.println(BookR.findAll());
     }
     public void findById(){
         System.out.println("Id입력");
