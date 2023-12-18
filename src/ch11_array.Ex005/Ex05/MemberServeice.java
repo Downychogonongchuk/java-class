@@ -59,6 +59,7 @@ public class MemberServeice {
 
     public void upDate() {
         if (loginEmail != null){ // 일치함
+            System.out.println("변경할 전화번호를 입력하세요");
             String mobile = sc.next();
             boolean result =  memberRepository.upDate(loginEmail,  mobile);
             if (result){

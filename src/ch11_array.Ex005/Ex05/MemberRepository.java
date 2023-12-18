@@ -29,7 +29,7 @@ public class MemberRepository {
         boolean result = false;
         for (int i = 0; i < memberDtoList.size(); i++) {
                 if (loginEmail.equals(memberDtoList.get(i).getMemberEmail())){
-                    memberDtoList.get(i).setMemberPassword(mobile);
+                    memberDtoList.get(i).setMemberMobile(mobile);
                     result = true;
                 }
         }
