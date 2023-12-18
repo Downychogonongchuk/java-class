@@ -66,14 +66,14 @@ public  List<BookDTO>search(String bookTitle){
         }
         return result;
     }
-        public  boolean delete(Long id){
-        boolean result = false;
-            for (int  i = 0;  i< dtoList.size(); i++) {
-                if (id.equals(dtoList.get(i).getId(id))){
-
-                }
-            }
-        }
+//        public  boolean delete(Long id){
+//        boolean result = false;
+//            for (int  i = 0;  i< dtoList.size(); i++) {
+//                if (id.equals(dtoList.get(i).getId(id))){
+//
+//                }
+//            }
+//        }
 
 
 

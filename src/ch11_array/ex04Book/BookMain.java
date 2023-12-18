@@ -26,8 +26,8 @@ public class BookMain {
                 bookS.findByTitle();
             } else if (selectNo == 5) {
                 bookS.update();
-            } else if (selectNo == 6) {
-                bookS.delete();
+//            } else if (selectNo == 6) {
+//                bookS.delete();
             } else if (selectNo == 0) {
                 run = false;
             }

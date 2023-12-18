@@ -107,16 +107,16 @@ public class BookService {
 //        Long findId = sc.nextLong();
 //        BookDTO BookD = BookR.findById(findId);
 //    }
-        public void delete(){
-            System.out.println("삭제할 id : ");
-            Long id = sc.nextLong();
-            boolean result = BookR.delete(id);
-            if (result){
-                System.out.println("삭제성공");
-            }else {
-
-            }
-        }
+//        public void delete(){
+//            System.out.println("삭제할 id : ");
+//            Long id = sc.nextLong();
+//            boolean result = BookR.delete(id);
+//            if (result){
+//                System.out.println("삭제성공");
+//            }else {
+//
+//            }
+//        }
 
 
 
