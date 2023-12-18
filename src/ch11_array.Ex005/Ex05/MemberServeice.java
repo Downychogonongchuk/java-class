@@ -15,23 +15,23 @@ public class MemberServeice {
             boolean result = memberRepository.check(memberEmail);
             if (result) {
                 System.out.println("사용가능한 이메일입니다.");
-                break;
+                    System.out.println("비밀번호를 입력하세요");
+                    String memberPassword = sc.next();
+                    System.out.println("이름을 입력하세요");
+                    String memberName = sc.next();
+                    System.out.println("전화번호를 입력하세요");
+                    String memberMobile = sc.next();
+                    MemberDto memberDto = new MemberDto(memberEmail, memberPassword, memberName, memberMobile);
+                    boolean result1 = memberRepository.signUp(memberDto);
+                    if (result1) {
+                        System.out.println("회원가입 성공");
+                    break;
+                    } else {
+                        System.out.println("회원 가입 실패");
+
+                }
             } else {
                 System.out.println("이미 사용중인 이메일입니다.");
-            }
-
-            System.out.println("비밀번호를 입력하세요");
-            String memberPassword = sc.next();
-            System.out.println("이름을 입력하세요");
-            String memberName = sc.next();
-            System.out.println("전화번호를 입력하세요");
-            String memberMobile = sc.next();
-            MemberDto memberDto = new MemberDto(memberEmail, memberPassword, memberName, memberMobile);
-            boolean result1 = memberRepository.signUp(memberDto);
-            if (result1) {
-                System.out.println("회원가입 성공");
-            } else {
-                System.out.println("회원 가입 실패");
             }
         }
     }
@@ -59,8 +59,14 @@ public class MemberServeice {
 
     public void upDate() {
         if (loginEmail != null){ // 일치함
-            memberRepository.upDate();
-        } else if (loginEmail == null) {
+            String mobile = sc.next();
+            boolean result =  memberRepository.upDate(loginEmail,  mobile);
+            if (result){
+                System.out.println("회원 정보가 수정되었습니다.");
+            }else {
+                System.out.println("수정실패!");
+            }
+        } else {
             System.out.println("로그인이 필요합니다");
         }
     }

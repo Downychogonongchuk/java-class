@@ -25,10 +25,15 @@ public class MemberRepository {
         return memberDtoList;
     }
 
-    public void upDate() {
-        System.out.println("변경할 비밀번호를 입력하세요");
-        String memberPassword = sc.next();
-        memberDtoList.get(1).setMemberPassword(memberPassword);
+    public boolean upDate( String loginEmail, String mobile) {
+        boolean result = false;
+        for (int i = 0; i < memberDtoList.size(); i++) {
+                if (loginEmail.equals(memberDtoList.get(i).getMemberEmail())){
+                    memberDtoList.get(i).setMemberPassword(mobile);
+                    result = true;
+                }
+        }
+        return result;
     }
 
     public void withDraw() {
@@ -41,6 +46,7 @@ public class MemberRepository {
 
             }
             }
+
         }
 
     public boolean check(String memberEmail) {

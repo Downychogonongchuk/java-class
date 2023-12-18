@@ -9,29 +9,30 @@ public class MemberServeice {
     private static String loginEmail = null;
 
     public void signUp() {
-        while (true){
+        while (true) {
             System.out.println("이메일을 입력하세요");
             String memberEmail = sc.next();
-            boolean result=  memberRepository.check(memberEmail);
-            if (result){
+            boolean result = memberRepository.check(memberEmail);
+            if (result) {
                 System.out.println("사용가능한 이메일입니다.");
-                break;
-            }else {
+                System.out.println("비밀번호를 입력하세요");
+                String memberPassword = sc.next();
+                System.out.println("이름을 입력하세요");
+                String memberName = sc.next();
+                System.out.println("전화번호를 입력하세요");
+                String memberMobile = sc.next();
+                MemberDto memberDto = new MemberDto(memberEmail, memberPassword, memberName, memberMobile);
+                boolean result1 = memberRepository.signUp(memberDto);
+                if (result1) {
+                    System.out.println("회원가입 성공");
+                    break;
+                } else {
+                    System.out.println("회원 가입 실패");
+                }
+
+            } else {
                 System.out.println("이미 사용중인 이메일입니다.");
             }
-        }
-        System.out.println("비밀번호를 입력하세요");
-        String memberPassword = sc.next();
-        System.out.println("이름을 입력하세요");
-        String memberName = sc.next();
-        System.out.println("전화번호를 입력하세요");
-        String memberMobile = sc.next();
-        MemberDto memberDto = new MemberDto(memberEmail,memberPassword,memberName,memberMobile);
-        boolean result1 = memberRepository.signUp(memberDto);
-        if (result1){
-            System.out.println("회원가입 성공");
-        }else {
-            System.out.println("회원 가입 실패");
         }
     }
 
