@@ -1,5 +1,12 @@
 package ch11_array.Ex005.Ex05;
 
+/** 설하언니가 연말이니까 다같이 술마시자고 밥방 멤 모아본다고 했는데 ㄱㄴ?
+ * 12월 금요일 언젠가 ㄱㄴ?
+ *
+ *
+ */
+
+
 public class MemberDto {
     private  long id;
     private String memberEmail;
