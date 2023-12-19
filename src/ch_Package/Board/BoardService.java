@@ -28,7 +28,8 @@ public class BoardService {
     public void findByAll() {
         List<BoardDTO> boardDTOList = boardRepository.findByAll();
         for (BoardDTO boardDTO: boardDTOList) {   // #
-            System.out.println(boardDTO);
+            System.out.println(boardDTO + "\t");
+            System.out.println(boardDTO.getCreatedAt());
         }
     }
 
@@ -37,7 +38,7 @@ public class BoardService {
         Long findId = scanner.nextLong();
         // 1. 조회수를 1증가
         //2. 상세내용 가져옴
-       
+
 
         BoardDTO result = boardRepository.findById(findId);
         if (result != null) {

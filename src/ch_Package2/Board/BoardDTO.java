@@ -6,4 +6,5 @@ public class BoardDTO {
     private String boardPass;
     private Long id;
     private int count;
+
 }
