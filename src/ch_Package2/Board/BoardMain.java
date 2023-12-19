@@ -15,13 +15,13 @@ public class BoardMain {
             System.out.println("-----------------------------");
             int sel = sc.nextInt();
             if (sel==1){
-
+                boardService.write();
             }if (sel==2){
-
+                boardService.list();
             }if (sel==3){
-
+                boardService.view();
             }if (sel==4){
-
+                boardService.
             }if (sel==5){
                 break;
             }
