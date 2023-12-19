@@ -27,12 +27,12 @@ public class BoardService {
 
     public void findByAll() {
         List<BoardDTO> boardDTOList = boardRepository.findByAll();
-        for (BoardDTO boardDTO: boardDTOList) {   // #
+        for (BoardDTO boardDTO : boardDTOList) {   // #
             System.out.println(boardDTO + "\t");
             System.out.println(boardDTO.getCreatedAt());
+//        }  listPrint(boardDTOList);
         }
     }
-
     public void findById() {
         System.out.print("조회할 글번호: ");
         Long findId = scanner.nextLong();
@@ -110,9 +110,17 @@ public class BoardService {
             System.out.println("검색에 성공하셨습니다.");
             for(BoardDTO boardDTO: result) {
                 System.out.println(boardDTO);
-            }
+            }    // 출력 전용 메서드로 검색결과 리스트를 넘겨줌
         } else {
             System.out.println("검색에 실패하셨습니다.");
         }
     }
+    //Refactoring (리팩터링)
+    // 목록 출력 전용 메서드
+    //findAll , search 메서드로 부터 list 데이터를 전달 받아서 출력을 하는 메서드
+    private void ListPrint(List<BoardDTO>boardDTOList){
+        
+    }
+
+
 }
