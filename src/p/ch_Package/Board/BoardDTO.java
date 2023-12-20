@@ -1,7 +1,4 @@
-package ch_Package.Board;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+package p.ch_Package.Board;
 
 public class BoardDTO {
     private int count = 0;

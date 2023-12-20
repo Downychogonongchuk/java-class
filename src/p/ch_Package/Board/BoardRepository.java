@@ -1,4 +1,4 @@
-package ch_Package.Board;
+package p.ch_Package.Board;
 
 import java.util.ArrayList;
 import java.util.List;

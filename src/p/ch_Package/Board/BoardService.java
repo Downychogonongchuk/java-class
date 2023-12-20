@@ -1,6 +1,5 @@
-package ch_Package.Board;
+package p.ch_Package.Board;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -119,8 +118,19 @@ public class BoardService {
     // 목록 출력 전용 메서드
     //findAll , search 메서드로 부터 list 데이터를 전달 받아서 출력을 하는 메서드
     private void ListPrint(List<BoardDTO>boardDTOList){
-        
+
     }
 
 
+    public void write() {
+        System.out.println("입력");
+    }
+
+
+    public void testData() {  
+        for (int i = 0; i <11 ; i++) {  // 1~10 번 까지 반복 데이터 생성
+            BoardDTO boardDTO = new BoardDTO("Title"+i,"writer"+i,"1234","contents"+i);
+            boardRepository.save(boardDTO);
+        }
+    }
 }

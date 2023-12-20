@@ -1,4 +1,4 @@
-package ch_Package;
+package p.ch_Package;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

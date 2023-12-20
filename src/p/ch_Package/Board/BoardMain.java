@@ -1,4 +1,4 @@
-package ch_Package.Board;
+package p.ch_Package.Board;
 
 import java.util.Scanner;
 
@@ -25,6 +25,8 @@ public class BoardMain {
                 boardService.delete();
             } else if (select == 6) {
                 boardService.search();
+            }else  if (select==7){
+                boardService.testData();
             } else if (select == 0) {
                 break;
             }
