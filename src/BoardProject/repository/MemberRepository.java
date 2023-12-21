@@ -37,8 +37,8 @@ public class MemberRepository {
     }
     public List<MemberDTO> all() {
         return memberDTOList;
-    }
-    public  void memberList() {
 
     }
-}
+
+    }
+

@@ -23,7 +23,7 @@ public class MainController {
             } else if (sel == 2) {
                 memberService.logIn();
             } else if (sel == 3) {
-                memberService.memberList();
+                memberService.all();
             } else if (sel == 4) {
                 memberService.memberModify();
             } else if (sel == 5) {

@@ -50,10 +50,13 @@ public class MemberService {
         }
     }
     public  void all(){
-        List<MemberDTO>memberDTOList =  memberRepository.all();
+        List<MemberDTO> memberDTOList =  memberRepository.all();
+       memberList(memberDTOList);
     }
-    public void memberList() {
-
+    public void memberList(List<MemberDTO> memberDTOList) {
+        for (MemberDTO memberDTO:memberDTOList) {
+            System.out.println(memberDTO.getId()+memberDTO.getMemberEmail()+memberDTO.getMemberName()+memberDTO.getCreatedAt());
+        }
     }
 
     public void memberModify() {
