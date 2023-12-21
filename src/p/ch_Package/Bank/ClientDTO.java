@@ -3,13 +3,13 @@ package p.ch_Package.Bank;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class ClientDTO {
+public class  ClientDTO {
     private Long id;
     private String clientName;
     private String accountNumber;
     private String clientPass;
     private String  clientCreatedAt;
-    private long balance=0;
+    private long balance=0;  //#
 
     public Long getId() {
         return id;
@@ -60,8 +60,8 @@ public class ClientDTO {
     }
     private static Long idValue=1L;
     public ClientDTO(String clientName, String accountNumber, String clientPass) {
-        this.id = idValue++;
-        this.clientName = clientName;
+        this.id = idValue++;  //  DTO 선언 시 자동저장
+        this.clientName = clientName; //매개변수로 받으면 그 값 저장 
         this.accountNumber = accountNumber;
         this.clientPass = clientPass;
         this.clientCreatedAt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
