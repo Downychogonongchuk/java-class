@@ -1,7 +1,5 @@
 package p.ch_Package.Bank;
-
 import java.util.Scanner;
-
 public class BankService {
     BankRepository bankRepository = new BankRepository();
     Scanner sc = new Scanner(System.in);
@@ -19,7 +17,6 @@ public class BankService {
                 System.out.println("계좌 비밀번호를 입력하세요");
                 String clientPass = sc.next();
                 ClientDTO clientDTO = new ClientDTO(clientName,accountNumber,clientPass);
-
                 boolean result = bankRepository.createAccount(clientDTO);
                 if (result){
                     System.out.println("계좌등록 완료");
@@ -29,7 +26,7 @@ public class BankService {
             }else {
                 System.out.println("이미 사용 중인 계좌번호입니다. ");
             }
-        }while (!checkResult);
+        }while (!checkResult);  // false 까지 do 반복
         }
 
     public void getBalance() {
@@ -42,7 +39,6 @@ public class BankService {
         }else {
             System.out.println("없는 계좌입니다.");
         }
-
     }
 
     public void deposit() {
@@ -135,8 +131,5 @@ public class BankService {
         }else {
             System.out.println("없는 계좌입니다.");
         }
-
-
     }
-
 }
