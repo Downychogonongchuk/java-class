@@ -47,9 +47,11 @@ public class BoardRepository {
         List<BoardDTO>searchList = new ArrayList<>();
         for (int i = 0; i <boardDTOList.size() ; i++) {
             if (boardDTOList.get(i).getBoardTitle().contains(search)){
+                // boardDTOList.get(i).getBoardTitle()에 contains(search)가 속하면 
                 searchList.add(boardDTOList.get(i));
+                // 만들어둔 리스트에 포함된 리스트의 목록을  담는다
             }
-        }return  searchList;
+        }return  searchList; // 검색어가 포함된 부분을 담은 리스트
     }
 }
 
