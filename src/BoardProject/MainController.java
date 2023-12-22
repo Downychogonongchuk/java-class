@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 public class MainController {
     public static void main(String[] args) {
-        BoardService boardService = new BoardService();
-        MemberService memberService = new MemberService();
-        Scanner sc = new Scanner(System.in);
+        BoardService boardService = new BoardService();  
+        MemberService memberService = new MemberService(); // 호출 할 서비스 선언
+        Scanner sc = new Scanner(System.in);  // 입력 받을 스캐너 선언
 
         while (true) {
             System.out.println("-----------------------------------------------------------------------------------------");
@@ -18,7 +18,7 @@ public class MainController {
             System.out.println("-----------------------------------------------------------------------------------------");
             System.out.print("선택> ");
             int sel = sc.nextInt();
-            if (sel == 1) {
+            if (sel == 1) {  // 1 입력 받을 시 멤버 서비스의 세이브 함수 호출
                 memberService.save();
             } else if (sel == 2) {
                 memberService.logIn();

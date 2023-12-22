@@ -2,6 +2,7 @@ package BoardProject.service;
 
 import BoardProject.common.Common;
 import BoardProject.dto.BoardDTO;
+import BoardProject.dto.CommentDTO;
 import BoardProject.repository.BoardRepository;
 import BoardProject.repository.CommentRepository;
 import BoardProject.repository.MemberRepository;
@@ -10,7 +11,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BoardService {
-    MemberRepository memberRepository = new MemberRepository();
     CommentRepository commentRepository = new CommentRepository();
     BoardRepository boardRepository = new BoardRepository();
     Scanner sc = new Scanner(System.in);
@@ -40,6 +40,18 @@ public class BoardService {
         Long id = sc.nextLong();
        BoardDTO boardDTO  = boardRepository.findById(id);
         System.out.println(boardDTO);
+        System.out.println("-----------댓글------------");
+        CommentDTO commentDTO1 = commentRepository.findById(id);
+        System.out.println(commentDTO1.getBoardId()+commentDTO1.getCommentWriter()+commentDTO1.getCommentContents()+commentDTO1.getCreatedAt());
+        System.out.println("댓글을 작성하시려면 1번, 메인메뉴로 돌아가시려면 2번을 눌러주세요");
+        int sel = sc.nextInt();
+        if (sel==1) {
+            System.out.println("입력");
+            String Comment = sc.next();
+            CommentDTO commentDTO = new CommentDTO(id, Common.loginEmail, Comment);
+            commentRepository.commentSave(commentDTO);
+            System.out.println("댓글이 저장되었습니다");
+        }
     }
 
     public void boardUpdate() {
