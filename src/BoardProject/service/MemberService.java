@@ -1,5 +1,7 @@
 package BoardProject.service;
 
+import BoardProject.common.Common;
+import BoardProject.dto.BoardDTO;
 import BoardProject.dto.MemberDTO;
 import BoardProject.repository.BoardRepository;
 import BoardProject.repository.CommentRepository;
@@ -10,8 +12,7 @@ import java.util.Scanner;
 
 public class MemberService {
     MemberRepository memberRepository = new MemberRepository();
-    CommentRepository commentRepository = new CommentRepository();
-    BoardRepository boardRepository = new BoardRepository();
+    BoardService boardService = new BoardService();
     Scanner sc = new Scanner(System.in);
 
     public void save() {
@@ -30,11 +31,11 @@ public class MemberService {
                 String name = sc.next();
                 System.out.println("전화번호 : ");
                 String mobile = sc.next();
-                MemberDTO memberDTO = new MemberDTO(email,pass,name,pass);
+                MemberDTO memberDTO = new MemberDTO(email,pass,name,mobile);
                   memberRepository.save(memberDTO);
                 System.out.println("회원 가입 완료");
             }
-        } while (!result);
+        } while (result);
     }
 
     public void logIn() {
@@ -55,16 +56,64 @@ public class MemberService {
     }
     public void memberList(List<MemberDTO> memberDTOList) {
         for (MemberDTO memberDTO:memberDTOList) {
-            System.out.println(memberDTO.getId()+memberDTO.getMemberEmail()+memberDTO.getMemberName()+memberDTO.getCreatedAt());
+            System.out.println(memberDTO.getId()+memberDTO.getMemberEmail()+memberDTO.getMemberName()+memberDTO.getCreatedAt()+memberDTO.getMemberMobile());
+        }
+    }
+    public void memberModify() {
+        if (Common.loginEmail  != null){
+            System.out.println("변경하실 전화번호를 입력하세요");
+            String memberMobile = sc.next();
+            memberRepository.memberModify(memberMobile);
+            System.out.println("전화번호가 변경되었습니다.");
+        }else {
+            System.out.println("로그인이 필요합니다.");
+        }
+    }
+    public void memberWithdraw() {
+        if (Common.loginEmail != null){
+            System.out.println("비밀번호를 입력해주세요");
+            String memberPassword = sc.next();
+            memberRepository.memberWithdraw(memberPassword);
+            System.out.println("회원 탈퇴 완료");
+        }else {
+            System.out.println("로그인이 필요합니다");
         }
     }
 
-    public void memberModify() {
-    }
-
-    public void memberWithdraw() {
-    }
-
     public void logOut() {
+        if (Common.loginEmail != null){
+            Common.loginEmail = null;
+            System.out.println(" 로그아웃 성공");
+        }else {
+            System.out.println("로그인 되어있지 않습니다.");
+        }
     }
-}
+
+    public void menu() {
+        while (true) {
+            System.out.println("-----------------------------------------------------------------------------------------");
+            System.out.println("1.글작성 | 2.글목록 | 3.글조회 | 4.글수정 | 5.글삭제 | 6.검색 | 7.sample | 0.메인메뉴");
+            System.out.println("-----------------------------------------------------------------------------------------");
+            System.out.print("선택> ");
+            int sel = sc.nextInt();
+            if (sel == 1) {
+                    boardService.write();
+            } else if (sel == 2) {
+                    boardService.boardList();
+            } else if (sel == 3) {
+                    boardService.findById();
+            } else if (sel == 4) {
+                    boardService.boardUpdate();
+            } else if (sel == 5) {
+                    boardService.boardDelete();
+            } else if (sel== 6) {
+                    boardService.boardSearch();
+            } else if (sel == 7) {
+
+            } else if (sel==0) {
+                break;
+            }
+        }
+    }
+    }
+

@@ -31,7 +31,7 @@ public class MainController {
             } else if (sel== 6) {
                 memberService.logOut();
             } else if (sel == 7) {
-                
+                memberService.menu();
             } else if (sel==0) {
                 break;
             }
