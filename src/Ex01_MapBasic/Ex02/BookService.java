@@ -59,7 +59,7 @@ public class BookService {
         BookDTO bookDTO = bookRepository.findById(id);
         if (bookDTO != null) {
             System.out.println("수정할 가격을 입력하세요.");
-        int bookPrice = scn.nextInt();
+            int bookPrice = scn.nextInt();
             boolean updateResult = bookRepository.update(id, bookPrice);
             if (updateResult) {
                 System.out.println("수정 성공");
@@ -74,9 +74,9 @@ public class BookService {
         System.out.print("삭제할 Id : ");
         Long id = scn.nextLong();
         boolean result = bookRepository.delete(id);
-        if(result){
+        if (result) {
             System.out.println("삭제 성공");
-        }else{
+        } else {
             System.out.println("삭제 실패");
         }
     }
@@ -94,3 +94,4 @@ public class BookService {
             System.out.println("검색 결과가 없습니다.");
         }
     }
+}
