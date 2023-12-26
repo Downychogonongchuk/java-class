@@ -41,10 +41,12 @@ public class BoardService {
        BoardDTO boardDTO  = boardRepository.findById(id);
         System.out.println(boardDTO);
         System.out.println("-----------댓글------------");
+        // 조회하는 게시들에 작성된 댓글 목록만 가져와야 함
         CommentDTO commentDTO1 = commentRepository.findById(id);
         System.out.println(commentDTO1.getBoardId()+commentDTO1.getCommentWriter()+commentDTO1.getCommentContents()+commentDTO1.getCreatedAt());
         System.out.println("댓글을 작성하시려면 1번, 메인메뉴로 돌아가시려면 2번을 눌러주세요");
         int sel = sc.nextInt();
+        // 댓글이 여러개 - 리스트 타입에 저장
         if (sel==1) {
             System.out.println("입력");
             String Comment = sc.next();
